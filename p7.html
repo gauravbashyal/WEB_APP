@@ -1,0 +1,83 @@
+<!-- Create a webpage using HTML only that demonstrates the use of
+different types of lists. Display an unordered list showing at least
+five favorite subjects or skills and an ordered list showing three
+daily activities or steps of a process. Also include a description list
+(<dl>) with at least two terms and their corresponding descriptions.
+Demonstrate list nesting by placing one list inside another and as a
+mini challenge, change the list style using the type attribute and
+create a mixed list where an unordered list is placed inside an
+ordered list. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Unordered List</h2>
+    <ul>
+        <li>Os</li>
+        <li>Web Development</li>
+        <li>Database Management</li>
+        <li>Python</li>
+    </ul><br>
+
+    <h2>Ordered List(Hobbies)</h2>
+    <ol type="1">
+        <li>Gaming</li>
+        <li>Singing</li>
+        <li>Dancing</li>
+    </ol>
+
+    <h2>Nested List</h2>
+    <ul>
+        <li>Languages</li>
+            <ul>
+            <li>C</li>
+            <li>c#</li>
+            <li>Java</li>
+            </ul>
+        <li>Tools</li>
+        <ul>
+            <li>vscode</li>
+            <li>Git</li>
+        </ul>
+    </ul>
+
+    <h2>Mixed List</h2>
+    <ol type="1">
+        <li>
+            Plan the topic
+            <ul type="square">      
+                <li>Choose a subject</li>
+                <li>Know your audience</li>
+                <li>Set objectives</li>
+            </ul>
+        </li>
+
+        <li>
+            Create content
+            <ul type="square">
+                <li>Write key points</li>
+                <li>Add images</li>
+                <li>Prepare examples</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>Description List</h2>
+    <dl>
+        <dt>Presentation</dt>
+        <dd>
+         A formal talk used to explain ideas to an audience.
+         </dd>
+
+        <dt>Slide</dt>
+        <dd>
+          A single page of a presentation, usually containing text or images.
+        </dd>
+    </dl>
+</body>
+</html>

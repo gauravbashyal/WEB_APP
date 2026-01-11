@@ -1,0 +1,60 @@
+<!-- Create a student registration form using HTML only that 
+ collects user information such as full name, email, password,
+ age, gender,course and acceptance of terms and conditions. 
+ Use appropriate
+form elements including text fields, radio buttons, dropdown lists
+and checkboxes. Apply basic HTML validation using attributes
+such as required, min, max and pattern. As a challenge, prevent
+the form from being submitted if the user’s age is less than 16 and
+display an alert message saying “Registration Successful” when
+the form is submitted successfully. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student_form</title>
+</head>
+<body>
+    <form onsubmit="showalert()">
+    <div class="container">
+    <h1>Registration form</h1>
+        
+        <label>Full Name:</label>
+        <input type="text" name="Name" required><br><br>
+
+        <input type="radio" value="Male" name="Gender" required>Male
+        <input type="radio" name="Gender" value="Female">Female
+        <input type="radio" name="Gender" value="Others">Others <br><br>
+
+        <label>Age:</label>
+        <input type="number" name="age" name="Age" min="16" step="1" required><br><br>
+
+        <label>Course:</label>
+        <select name="course" required>
+            <option value=""></option>
+            <option value="BCA">Bca</option>
+            <option value="Bsc">BSc</option>
+            <option value="Bcom">Bcom</option>
+        </select><br><br>
+
+        <label>Email:</label>
+        <input type="email" name="Email" required><br><br>
+
+        <label>Password:</label>
+        <input type="password" name="Password" pattern=".{6,}" required><br><br>
+        
+        <input type="checkbox" required>I accept the terms and conditions<br><br>
+        <button type="submit">Submit</button>
+        
+    </form>
+    </div>
+
+    <script>
+            function showalert(){
+                alert("Registration Successful");
+            }
+    </script>
+</body>
+</html>

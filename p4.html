@@ -1,0 +1,87 @@
+<!-- Create a personal profile card using HTML only that displays a
+user’s basic information in a structured format. The profile card
+should include a profile image, full name, short description or bio,
+research interest, skills and contact information such as email or
+website using hyperlinks. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            align-items: center;
+            background-color: aliceblue;
+        }
+        .container{
+            background-color: aquamarine;
+            border: 1px solid black;
+            width: 500px;
+            height: 700px;
+             margin-left: 30%;
+             margin-top: 7%;
+            /* text-align: center; */
+        }
+        h1{
+            text-align: center;
+        }
+        .photo{
+            text-align: center;
+        }
+        .photo img{
+            /* background-color: red; */
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .photo h2{
+            color:brown;
+            margin-top: 0px;
+        }
+        p{
+            text-align: center;
+        }
+        h3{
+            margin-left: 20px;
+        }
+        a{
+            text-align: center;
+            margin-left: 15%;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Profile Card</h1>
+
+        <div class="photo">
+            <img src="i1.jpg" alt="Profile Image">
+            <h2>Gaurav Bashyal</h2>
+        </div>
+    <p>My name is Gaurav Bashyal. I am currently studing B.E at Purwanchal Campus Dharan. I am focused on learning new skills,improving my knowledge.</p>
+    
+    <div class="Ints">
+        <h3>Research Interest:</h3>
+        <p>Web development, artificial intelligence, and software engineering.</p>
+
+        <h3>Skills:</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Basic JavaScript</li>
+            </ul>  
+    </div>
+
+    <h3>Contact:</h3>
+    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+    <a href="https://github.com" target="_blank">Github</a>
+    <a href="https://linkedin.com" target="_blank">linkedin</a>
+        
+    </div>
+    
+</body>
+</html>
