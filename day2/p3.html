@@ -1,0 +1,215 @@
+<!-- Create a webpage that demonstrates CSS positioning and display properties. 
+ Use different elements and apply static, relative, absolute, fixed, and sticky positioning. 
+ Apply display values such as block, inline, inline-block, and none. Use z-index to show overlapping elements and 
+ apply overflow properties such as hidden, scroll and auto where necessary.
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+         font-family: Arial,sans-serif;
+         margin: 0;
+         padding: 0;
+      }
+      h1,h2{
+         text-align: center;
+      }
+      .block{
+         display: block;
+         background-color:antiquewhite;
+         margin: 10px;
+         padding:10px;
+         margin-bottom: 20px;
+      }
+      .inline{
+         display: inline;
+         background-color: lightgreen;
+         padding: 5px;
+         margin: 5px;
+       
+      }
+      .inline-block{
+         display: inline-block;
+         width: 120px;
+         height: 50px;
+         background-color: orange;
+         margin: 5px;
+         text-align: center;
+         line-height: 50px;
+         margin-top: 20px;
+      }
+      .hidden{
+         display: none;
+      }
+
+       /* now for positioning*/
+       .static-box{
+         position: static;
+         background-color: #ddd;
+         padding: 15px;
+         /* top: 20px; */
+         margin: 10px;
+       }
+       .relative-box{
+         position: relative;
+         background-color: yellowgreen;
+         top: 20px;
+         left: 30px;
+         padding: 15px;
+         margin: 10px;
+       }
+       .absolute-container{
+         position: relative;
+         height: 150px;
+         background-color: azure;
+         margin: 20px;
+         
+       }
+       .absolute-box{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: purple;
+            color: white;
+            padding: 10px;
+       }
+       .fixed-box{
+         position: fixed;
+         bottom: 10px;
+         right: 10px;
+         background-color: black;
+         color: white;
+         padding: 10px;
+       }
+       .sticky-box{
+         position: sticky;
+         top: 0;
+         background-color: red;
+         padding: 10px;
+         font-weight: bold;
+       }
+
+       /* aba z index ko lagi */
+       
+       .z-container{
+         position: relative;
+         height: 200px;
+         /* margin-right:20px; */
+         /* margin-left: 650px; */
+       }
+
+       .box1{
+         position: absolute;
+         width: 150px;
+         height: 150px;
+         background-color: red;
+         top: 20px;
+         left: 20px;
+         z-index: 1;
+      }
+      .box2{
+         position: absolute;
+         width: 150px;
+         height: 150px;
+         background-color: aquamarine;
+         top: 60px;
+         left: 60px;
+         z-index: 2;
+         opacity: 0.9;
+      }
+      .overflow-container{
+         display: flex;
+      }
+      .overflow-hidden{
+         width:200px;
+         height: 80px;
+         overflow: hidden;
+         border: 2px solid black;
+         margin: 10px;
+         margin-right: 20px;
+      }
+      .overflow-scroll{
+         width:200px;
+         height: 80px;
+         overflow: scroll;
+         border: 2px solid black;
+         margin: 10px;
+         margin-left: 30px;
+         margin-right: 30px;
+      }
+      .overflow-auto{
+         width:200px;
+         height: 80px;
+         overflow: auto;
+         border: 2px solid black;
+         margin: 10px;
+      }
+      
+
+
+    </style>
+ </head>
+ <body>
+    <h1>Css Positioning and Display</h1>
+   <div class="sticky-box">
+      Sticky(stikcs to top when scrolling)
+   </div>
+
+   <h2>Display Properties</h2>
+   <div class="block">I am a block element</div>
+
+      <span class="inline" >Inline 1</span>
+      <span class="inline">Inline 2</span>
+
+      <div>
+         <div class="inline-block">Box 1</div>
+         <div class="inline-block">Box 2</div>
+         <div class="inline-block">Box 3</div>
+      </div>
+
+      <div class="hidden">
+         You should not see me (display:none)
+      </div>
+
+      <h2>Positioning</h2>
+      <div class="static-box">Static Example(default positioning)</div>
+
+      <div class="relative-box">Relative Example(moved 20px down and 30px right</div>
+      
+      <div class="absolute-container">
+         Absolute container (relative parent)
+         <div class="absolute-box">absolute example(positioned inside parent)</div>
+      </div>
+
+      <h3>Z index Overlapping</h3>
+      <div class="z-container">
+         <div class="box1">z-index 1</div>
+         <div class="box2">z-index 2</div>
+      </div>
+      
+      <h2>Overflow</h2>
+      <div class="overflow-container">
+      <div class="overflow-hidden">
+         This content is too long and will be clipped beacuse overflow is hidden.
+         Extra text will not be visible.
+      </div>
+      <div class="overflow-scroll">
+         This content will show scrollbars only when needed beacuase overflow is scroll.
+         keep adding more text tot see scrolling behavior
+      </div>
+      <div class="overflow-auto">
+         This contnent will show scrollbars only when needed because overflow is auto.
+         Add more text if necessary to test it.
+      </div>
+      </div>
+
+      <div class="fixed-box">
+         Fixed box hoi tw
+      </div>
+   </body>
+ </html>
