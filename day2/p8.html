@@ -1,0 +1,121 @@
+<!-- Create a personal profile card using HTML and CSS that displays a user’s basic information in a visually structured format. The profile card should 
+ include a profile image, full name, short description or bio, research interests, skills and contact information such as email or website using hyperlinks. 
+ Use CSS to style the card with appropriate borders, shadows, spacing, background colors and font styles. Apply layout techniques such as Flexbox or Grid to 
+ align the content inside the card. Include hover effects, transitions or subtle animations to enhance the presentation of the card and ensure
+that all information is clearly readable and well-organized. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Card</title>
+
+    <style>
+        body{
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .container{
+            background-color: white;
+            width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover{
+            transform: scale(1.03);
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        .photo{
+            text-align: center;
+        }
+
+        .photo img{
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid brown;
+        }
+
+        .photo h2{
+            color:brown;
+            margin-top: 10px;
+        }
+
+        p{
+            text-align: center;
+        }
+
+        h3{
+            margin-top: 15px;
+        }
+
+        ul{
+            margin-left: 20px;
+        }
+
+        .contact{
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .contact a{
+            margin: 0 10px;
+            text-decoration: none;
+            color: blue;
+            transition: color 0.3s;
+        }
+
+        .contact a:hover{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Profile Card</h1>
+
+        <div class="photo">
+            <img src="i1.jpg" alt="Profile Image">
+            <h2>Gaurav Bashyal</h2>
+        </div>
+
+        <p>
+            My name is Gaurav Bashyal. I am currently studying B.E at Purwanchal Campus Dharan. I am focused on learning new skills and improving my knowledge.
+        </p>
+
+        <h3>Research Interest:</h3>
+        <p>Web development, Artificial Intelligence, and Software Engineering.</p>
+
+        <h3>Skills:</h3>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Basic JavaScript</li>
+        </ul>  
+
+        <h3>Contact:</h3>
+        <div class="contact">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

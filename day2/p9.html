@@ -1,0 +1,157 @@
+<!-- Create a webpage using HTML and CSS that displays student information in a tabular format. Use the <table>, <tr>, <th>, 
+    and <td> tags to design the table with appropriate headings and at least seven rows of student data. Apply CSS to style 
+        the table including borders, padding, spacing, text alignment, background colors and font styling. Use alternate row 
+        coloring, hover effects, and table caption styling to improve readability and visual appeal. Ensure that the table is 
+        responsive and maintains proper structure and alignment on different screen sizes.
+ -->
+
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Student Information Table</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            padding: 20px;
+        }
+
+        .table-container {
+            overflow-x: auto; /* Makes table responsive */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            min-width: 600px;
+        }
+
+        caption {
+            caption-side: top;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 10px;
+            color: #333;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        /* Alternate row coloring */
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Hover effect */
+        tr:hover {
+            background-color: #d1f0d1;
+        }
+
+        /* Responsive text size */
+        @media screen and (max-width: 600px) {
+            table {
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="table-container">
+
+<table>
+    <caption>Student Information</caption>
+
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Course</th>
+        <th>Email</th>
+    </tr>
+
+    <tr>
+        <td>1</td>
+        <td>Arjun Thapa</td>
+        <td>18</td>
+        <td>Male</td>
+        <td>BCA</td>
+        <td>arjun@gmail.com</td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>Ina Poudel</td>
+        <td>19</td>
+        <td>Female</td>
+        <td>BSc</td>
+        <td>ina@gmail.com</td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>Ankit Neupane</td>
+        <td>20</td>
+        <td>Male</td>
+        <td>BCom</td>
+        <td>ankit@gmail.com</td>
+    </tr>
+
+    <tr>
+        <td>4</td>
+        <td>Ashika Mahat</td>
+        <td>18</td>
+        <td>Female</td>
+        <td>BCA</td>
+        <td>ashika@gmail.com</td>
+    </tr>
+
+    <tr>
+        <td>5</td>
+        <td>Dilip Misra</td>
+        <td>21</td>
+        <td>Male</td>
+        <td>BSc</td>
+        <td>dilip@gmail.com</td>
+    </tr>
+
+    <tr>
+        <td>6</td>
+        <td>Angel Khanal</td>
+        <td>19</td>
+        <td>Female</td>
+        <td>BCom</td>
+        <td>Khanal@gmail.com</td>
+    </tr>
+
+    <tr>
+        <td>7</td>
+        <td>Gaurav Bashyal</td>
+        <td>20</td>
+        <td>Male</td>
+        <td>BCA</td>
+        <td>gaurav@gmail.com</td>
+    </tr>
+
+</table>
+
+</div>
+
+</body>
+</html>

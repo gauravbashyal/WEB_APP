@@ -1,0 +1,122 @@
+<!-- Design a student registration form using HTML and CSS that collects
+ user information such as username, email, password, age, gender, course
+ and acceptance of terms and conditions. Use CSS to style the form elements
+including text fields, radio buttons, dropdown lists and checkboxes to 
+make the form visually appealing and user-friendly. Apply layout techniques
+such as spacing, alignment, borders, background colors and font styling to
+organize the form in a structured manner. Ensure that form validation 
+messages and required fields are clearly visible and highlight the input
+fields when focused. As a challenge, use CSS to display a message box or 
+style the alert area that appears if the user’s age is less than 16 and 
+apply hover or focus effects on the submit button to indicate 
+interactivity.
+ --><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student_form</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f4f8;
+    }
+    .container {
+        width: 400px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    label {
+        font-weight: bold;
+    }
+    input, select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    input:focus, select:focus {
+        border-color: green;
+        outline: none;
+        box-shadow: 0 0 5px green;
+    }
+    input[type="radio"] {
+        width: auto;
+        margin-right: 5px;
+    }
+    input[type="checkbox"] {
+        width: auto;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<form onsubmit="return showalert()">
+
+<h1>Registration Form</h1>
+
+<label>Full Name:</label>
+<input type="text" name="Name" required><br><br>
+
+<label>Gender:</label><br>
+<input type="radio" value="Male" name="Gender" required> Male
+<input type="radio" name="Gender" value="Female"> Female
+<input type="radio" name="Gender" value="Others"> Others <br><br>
+
+<label>Age:</label>
+<input type="number" name="Age" min="16" step="1" required><br><br>
+
+<label>Course:</label>
+<select name="course" required>
+    <option value="">-- Select Course --</option>
+    <option value="BCA">BCA</option>
+    <option value="BSc">BSc</option>
+    <option value="BCom">BCom</option>
+</select><br><br>
+
+<label>Email:</label>
+<input type="email" name="Email" required><br><br>
+
+<label>Password:</label>
+<input type="password" name="Password" pattern=".{6,}" required><br><br>
+
+<input type="checkbox" required> I accept the terms and conditions<br><br>
+
+<button type="submit">Submit</button>
+
+</form>
+</div>
+
+<script>
+function showalert(){
+    alert("Registration Successful");
+    return false;
+}
+</script>
+
+</body>
+</html>
