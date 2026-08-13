@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Dynamic List</title>
+    <style>
+        #boxContainer div {
+            background-color: yellow;
+            margin: 5px 0;
+            padding: 5px;
+        }
+        input {
+            padding: 5px;
+        }
+        button {
+            padding: 5px 10px;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Dynamic List</h2>
+
+    <input type="text" id="itemInput" placeholder="Enter item">
+
+    <button onclick="addItem()">Add Item</button>
+    <button onclick="removeItem()">Remove Last Item</button>
+
+
+    <div id="boxContainer"></div>
+
+    <script>
+
+        function addItem() {
+            var text = document.getElementById("itemInput").value;
+
+            if (text === "") {
+                alert("Please type something!");
+                return;
+            }
+
+            var newDiv = document.createElement("div"); 
+            newDiv.textContent = text;                  
+            document.getElementById("boxContainer").appendChild(newDiv); 
+
+            document.getElementById("itemInput").value = ""; 
+        }
+
+        
+        function removeItem() {
+            var container = document.getElementById("boxContainer");
+
+            if (container.lastChild) {
+                container.removeChild(container.lastChild);
+            } else {
+                alert("The list is already empty!");
+            }
+        }
+    </script>
+
+</body>
+</html>
