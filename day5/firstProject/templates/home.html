@@ -1,0 +1,46 @@
+{% comment %} {% extends 'layout.html'%}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+     <h2>Hello Everyone, Welcome to our Home Page!!!</h2>
+    <p>Do you wanto to know more about me? <a href="about/">Click Here</a></p>
+{% endblock%} {% endcomment %}
+
+<h2>Registration Form</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    Name: <input type="text" name="name"><br><br>
+    Username: <input type="text" name="username"><br><br>
+    Password: <input type="password" name="password"><br><br>
+    Age: <input type="number" name="age"><br><br>
+    Gender: <input type="text" name="gender"><br><br>
+    Email: <input type="email" name="email"><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<hr>
+
+<h2>Users Data</h2>
+
+<table border="1">
+<tr>
+    <th>Name</th>
+    <th>Username</th>
+    <th>Age</th>
+    <th>Gender</th>
+    <th>Email</th>
+</tr>
+
+{% for user in users %}
+<tr>
+    <td>{{ user.name }}</td>
+    <td>{{ user.username }}</td>
+    <td>{{ user.age }}</td>
+    <td>{{ user.gender }}</td>
+    <td>{{ user.email }}</td>
+</tr>
+{% endfor %}
+</table>
